@@ -1,0 +1,30 @@
+<div class="a">
+    <input type="text" [(ngModel)]="pin" />
+    <button (click)="getD()" class="btn btn-primary">Click</button>
+    
+    
+    </div>
+    <div *ngFor="let c of abc">
+      
+      <p>Message{{c.Message}}</p>
+      <p>{{c.PostOffice[1].Name}}</p>
+    </div>
+    <p>free</p>
+    <select *ngFor="let c of abc" >
+      <option>{{c.PostOffice[0]}}</option>
+    </select>
+    
+    
+    <div *ngFor="let sss of data2">
+      <div class="swim">
+    <img  style="width:200px;height:200px" [src]="sss.image"/>
+    <br/>
+    <button class="btn btn-primary" (click)="saveId(sss)">Buy Now</button>
+    </div>
+    </div>
+    
+    <div *ngFor="let x of data3">
+      <p>{{x.Message}}</p>
+      <p>{{x.Status}}</p>
+    </div>
+  

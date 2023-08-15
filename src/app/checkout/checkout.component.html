@@ -1,0 +1,26 @@
+<p (click)="getIdFromService()">selected product</p>
+<div *ngFor="let data32 of hhh">
+    <p>{{data32.title}}</p>
+</div>
+
+<form [formGroup]="data">
+    <span>Name</span>
+      <input type="text" formControlName="name"/>
+    <br/>
+    <span>Address</span>
+    <input type="text" formControlName="address"/>
+    <br/>
+    <span>Age</span>
+    <input type="text" formControlName="age"/>
+    <br/>
+    <span>Number</span>
+    <input type="text" formControlName="number"/>
+    <br/>
+    <span>Pincode</span>
+    <input type="text" [(ngModel)]="pin" formControlName="pin2" (change)="booknow()"/>
+    <span *ngFor="let x of out">
+    <small>{{x.Status}}</small>
+</span>
+    <br/>
+<button (click)="data3()" [disabled]="data.invalid">Book the product</button>
+</form>
