@@ -27,7 +27,7 @@ booknow(){
 this.ff.getA(this.pin).subscribe({
   next:(result:any)=>{
     console.log("===result====",result[0])
-    this.out=result;
+        this.out=[result];
   },error:(err:any)=>{
     console.log("---errir----",err)
   }});
@@ -47,7 +47,7 @@ console.log("id"+this.id2);
 this.ff.getPlace(this.id2).subscribe({
   next:(res:any)=>{
     console.log(res);
-this.hhh=res;
+this.hhh=[res];
   }
 
 
